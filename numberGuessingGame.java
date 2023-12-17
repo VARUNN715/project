@@ -6,7 +6,7 @@ public class numberGuessingGame {
         Scanner sc = new Scanner(System.in);
         int myNum = (int)(Math.random()*100);
         int num = 0;
-       try{ do{
+       do{
             System.out.println("guess your number : ");
             num = sc.nextInt();
 
@@ -22,12 +22,10 @@ public class numberGuessingGame {
                 System.out.println("try again the number is lesser");
             }
             else{
-                quit();
+                System.out.println("you quit!!");
             }
         } while(num >= 0);
-    } catch(Exception e){
-       // System.err.println(e);
-    }
+   
     sc.close();
         
     }
@@ -35,7 +33,5 @@ public class numberGuessingGame {
     private static void exit() {
         System.out.println("game over you won");
     }
-    private static void quit() {
-        System.out.println("you quit!!");
-    }
+    
 }
